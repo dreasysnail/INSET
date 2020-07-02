@@ -2,6 +2,9 @@
 
 This repository contains the implementation for "**INSET: Sentence Infilling with INter-SEntential Transformer**" (ACL2020).
 
+## Slides
+The slides of our talk can be found at [here](https://github.com/dreasysnail/INSET/blob/master/inset.pdf)
+
 
 
 ## Citation
