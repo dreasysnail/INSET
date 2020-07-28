@@ -4,9 +4,13 @@ This repository contains the implementation for "**INSET: Sentence Infilling wit
 
 ![Screenshot](inset.png)
 
+
+## Live Demo
+
+The live demo is available now! It can be found at [here](http://52.247.25.3:8899). Please expect delay and crash as it is running on a single GPU machine.
+
 ## Slides
 The slides of our talk can be found at [here](https://github.com/dreasysnail/INSET/blob/master/inset.pdf)
-
 
 
 ## Citation
