@@ -27,6 +27,17 @@ conda activate LSP
 
 If you run this on an architecture other than Linux, please use `LSP-generic.yml` instead of `LSP-linux.yml` but please note that the generic one is not tested in all platform, so the stablity can not be gauranteed.
   
+#### 
+
+Link to the model and config files can be downloaded [here](https://yizzhang.blob.core.windows.net/transformer/yichen/demo/models.tar.gz?st=2020-08-03T00%3A51%3A23Z&se=2020-08-04T00%3A51%3A23Z&sp=rl&sv=2018-03-28&sr=b&sig=KB5VNcsuPOSct7kdQqQkrNfjOKYR7uTc%2F3TMRLmqhGU%3D).  
+
+To continue, please decompress the file and move the `models` folder into the main directory of this repo
+```bash
+tar -xzvf models.tar.gz
+```
+
+  
+  
 #### Generate from INSET model with your own input
 Please put an `input.txt` (see the `input.txt` in this repo for an example) into the main folder of this code, with `\t` seperating the first **THREE** and last **THREE** sentences. The generation can be done using following command:
   
