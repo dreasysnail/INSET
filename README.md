@@ -55,11 +55,17 @@ The slides of our talk can be found at [here](https://github.com/dreasysnail/INS
 ## Citation
 If you use this code in your research, you can cite our [paper](https://arxiv.org/abs/1911.03892):
 ```bash
-@inproceedings{huang2019inset,
-    title={INSET: Sentence Infilling with INter-SEntential Transformer},
-    author={Yichen Huang and Yizhe Zhang and Oussama Elachqar and Yu Cheng},
-    year={2020},
-    booktitle={ACL},
+@inproceedings{huang-etal-2020-inset,
+    title = "{INSET}: Sentence Infilling with {IN}ter-{SE}ntential Transformer",
+    author = "Huang, Yichen and Zhang, Yizhe and Elachqar, Oussama and Cheng, Yu",
+    booktitle = "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics",
+    month = jul,
+    year = "2020",
+    address = "Online",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/2020.acl-main.226",
+    doi = "10.18653/v1/2020.acl-main.226",
+    pages = "2502--2515",
 }
 ```
 
