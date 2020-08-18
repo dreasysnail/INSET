@@ -29,7 +29,7 @@ If you run this on an architecture other than Linux, please use `LSP-generic.yml
   
 #### 
 
-Link to the model and config files can be downloaded [here](https://yizzhang.blob.core.windows.net/transformer/yichen/demo/models.tar.gz?st=2020-08-03T00%3A51%3A23Z&se=2020-08-04T00%3A51%3A23Z&sp=rl&sv=2018-03-28&sr=b&sig=KB5VNcsuPOSct7kdQqQkrNfjOKYR7uTc%2F3TMRLmqhGU%3D).  
+Link to the model and config files can be downloaded [here](https://yizzhang.blob.core.windows.net/transformer/yichen/demo/models.tar.gz?st=2020-08-18T20%3A39%3A45Z&se=2023-11-08T20%3A39%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=5HhSd3GKZKbcDnYIhUY4XhijSD5WGOO%2F8F7nLaJZ45U%3D).  
 
 To continue, please decompress the file and move the `models` folder into the main directory of this repo
 ```bash
