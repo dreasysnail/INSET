@@ -48,8 +48,10 @@ python3 INSET_test.py
 The generation will be at the same folder with a file name `output.txt`
 
 
-## Slides
-The slides of our talk can be found at [here](https://github.com/dreasysnail/INSET/blob/master/inset.pdf)
+## Talk and slides
+A video presentation of our work is available [here](https://www.youtube.com/watch?v=369mXo2W-Cg).
+
+The slides of our work are available [here](https://github.com/dreasysnail/INSET/blob/master/inset.pdf).
 
 
 ## Citation
