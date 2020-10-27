@@ -4,7 +4,6 @@ import torch
 from pytorch_pretrained_bert_inset import BertTokenizer, BertModel
 from torch.nn.utils.rnn import pad_sequence
 import tqdm
-import pdb
 
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model_bert = BertModel.from_pretrained('bert-base-uncased', state_dict=torch.load('models/BERT-pretrain-1-step-5000.pkl')).cuda()
