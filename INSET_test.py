@@ -7,7 +7,7 @@ import nltk
 import re
 import numpy as np
 import tqdm
-# nltk.download('punkt')
+nltk.download('punkt')
 
 import sys
 import torch
@@ -58,8 +58,8 @@ if __name__ == "__main__":
     model_pre = load_model(GPT2LMHeadModel(config), 'models/PRE-pretrain-1-step-5000.pkl', args).cuda()
     model_pre.eval()
     model_gpt.eval()
-    w = torch.load('models/weight.pt')
-    b = torch.load('models/bias.pt')
+    w = model_bert.encoder.layer[-1].output.LayerNorm.weight
+    b = model_bert.encoder.layer[-1].output.LayerNorm.bias
 
     # no lexical hints
     bert_sent_no_key = BertModelSent.from_pretrained('bert-base-uncased', state_dict=torch.load('models/BERTsent-8-step-1721.pkl')).cuda()
@@ -86,7 +86,7 @@ if __name__ == "__main__":
     
 
                 encoded_layers, _ = model_bert(ids, torch.zeros_like(ids), 1 - m, False)
-                x_enc = encoded_layers[:, 0, :]
+                x_enc = (encoded_layers[:, 0, :] - b ) / w
 
                 x = x_enc.clone()
                 x[3, :] = torch.zeros(x_enc.size(-1)).cuda()
