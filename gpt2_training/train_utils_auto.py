@@ -1,10 +1,3 @@
-'''
- * @Author: Siqi Sun, Yizhe Zhang, Yen-Chun Chen
- * @Date: 2019-04-01 14:38:09
- * @Last Modified by:   Yizhe Zhang
- * @Last Modified time: 2019-04-01 14:38:09
- '''
-
 import logging
 from math import ceil
 import os
@@ -24,7 +17,6 @@ logger = logging.getLogger(__name__)
 
 
 def load_model(model, checkpoint, args, verbose=False):
-    # n_gpu = args.n_gpu
     device = args.device
     if checkpoint is None or checkpoint == "None":
         if verbose:
@@ -44,13 +36,8 @@ def load_model(model, checkpoint, args, verbose=False):
             start_model = model.transformer
         start_model.load_state_dict(model_state_dict)
 
-    # if args.fp16:
-    #    logger.info('in fp16, model.half() activated')
-    #    model.half()
     model.to(device)
-    # if n_gpu > 1:
-    #    logging.info('data parallel because more than one gpu')
-    #    model = torch.nn.DataParallel(model)
+
     return model
 
 
@@ -85,9 +72,9 @@ class InputFeatures(object):
 
 
 class DynamicBatchingLoader(object):
-    def __init__(self, source, batch_size, max_seq_length, is_train):
-        self.corpus_bert = json.load(open(source + '_bert_test.json')) #+ pickle.load(open(source + '_bert_test.json', 'rb'))
-        self.corpus_gpt = json.load(open(source + '_gpt_test.json')) #+ pickle.load(open(source + '_gpt_test.json', 'rb'))
+    def __init__(self, batch_size, max_seq_length, is_train):
+        self.corpus_bert = json.load(open('dataset/sents_derep_bert_test.json'))
+        self.corpus_gpt = json.load(open('dataset/sents_derep_gpt_test.json'))
         self.bs = batch_size
         self.max_seq_length = max_seq_length
         self.train = is_train
@@ -142,8 +129,3 @@ def boolean_string(s):
     if s not in {'False', 'True'}:
         raise ValueError('Not a valid boolean string')
     return s == 'True'
-
-
-
-
-
