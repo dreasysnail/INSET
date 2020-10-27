@@ -720,9 +720,9 @@ class BertModel(BertPreTrainedModel):
         pooled_output = self.pooler(sequence_output)
         if not output_all_encoded_layers:
             encoded_layers = encoded_layers[-1]
-        normalized_output = (encoded_layers.squeeze() - self.encoder.layer[-1].output.LayerNorm.bias) / self.encoder.layer[-1].output.LayerNorm.weight
-        return normalized_output, pooled_output
-        # return encoded_layers, pooled_output
+        # normalized_output = (encoded_layers.squeeze() - self.encoder.layer[-1].output.LayerNorm.bias) / self.encoder.layer[-1].output.LayerNorm.weight
+        # return normalized_output, pooled_output
+        return encoded_layers.squeeze(), pooled_output
 
 
 class BertForPreTraining(BertPreTrainedModel):
