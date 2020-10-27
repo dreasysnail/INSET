@@ -47,6 +47,10 @@ python3 INSET_test.py
 ```
 The generation will be at the same folder with a file name `output.txt`
 
+## Training
+
+We have uploaded our training code. We will provide instructions for using them and dataset files in few days.
+
 
 ## Talk and slides
 A video presentation of our work is available [here](https://www.youtube.com/watch?v=369mXo2W-Cg).
