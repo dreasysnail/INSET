@@ -29,7 +29,9 @@ If you run this on an architecture other than Linux, please use `LSP-generic.yml
   
 #### 
 
-Link to the model and config files can be downloaded [here](https://yizzhang.blob.core.windows.net/transformer/yichen/demo/models.tar.gz?st=2020-08-18T20%3A39%3A45Z&se=2023-11-08T20%3A39%3A00Z&sp=rl&sv=2018-03-28&sr=b&sig=5HhSd3GKZKbcDnYIhUY4XhijSD5WGOO%2F8F7nLaJZ45U%3D).  
+Link to the dataset files (Trip review data) can be downloaded [here](https://yizzhang.blob.core.windows.net/transformer/yichen/test_github/INSET/dataset.tar.gz?sv=2019-10-10&st=2020-10-27T20%3A27%3A48Z&se=2029-10-28T20%3A27%3A00Z&sr=b&sp=r&sig=9vODA7K%2By%2B4Y%2BzJVuyuBMXz82AgwXvTb3WMn2dDmDHo%3D).  
+
+Link to the model and config files can be downloaded [here](https://yizzhang.blob.core.windows.net/transformer/yichen/test_github/INSET/models.tar.gz?sv=2019-10-10&st=2020-10-27T20%3A25%3A40Z&se=2029-10-28T20%3A25%3A00Z&sr=b&sp=r&sig=SeYtZYcnCy9R5wnuM8rZxz63%2Fwq5fv5xVHxZLK0JCCI%3D).  
 
 To continue, please decompress the file and move the `models` folder into the main directory of this repo
 ```bash
