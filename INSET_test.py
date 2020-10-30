@@ -1,8 +1,5 @@
 import json
 import random
-
-import json
-import random
 import nltk
 import re
 import numpy as np
