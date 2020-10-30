@@ -9,7 +9,7 @@ tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 model_bert = BertModel.from_pretrained('bert-base-uncased', state_dict=torch.load('models/BERT-pretrain-1-step-5000.pkl')).cuda()
 
 data = pickle.load(open('dataset/tripadvisor_review_processed_uncut.json', 'rb'))
-print('total number of paragraphs is ', len(data))
+print('total number of paragraphs is', len(data))
 
 cut = []
 paragraphs = []
