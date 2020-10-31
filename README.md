@@ -5,9 +5,16 @@ This repository contains the implementation for "**INSET: Sentence Infilling wit
 ![Screenshot](inset.png)
 
 
+## Talk and slides
+A video presentation of our work is available [here](https://www.youtube.com/watch?v=369mXo2W-Cg).
+
+The slides of our work are available [here](https://github.com/dreasysnail/INSET/blob/master/inset.pdf).
+
+
 ## Live Demo
 
 The live demo is available now! It can be found at [here](http://52.247.25.3:8899). Please expect delay and crash as it is running on a single GPU machine.
+
 
 ## Decoding with your own input file
 
@@ -52,12 +59,6 @@ The generation will be at the same folder with a file name `output.txt`
 ## Training
 
 We have uploaded our training code. We will provide instructions for using them and dataset files in few days.
-
-
-## Talk and slides
-A video presentation of our work is available [here](https://www.youtube.com/watch?v=369mXo2W-Cg).
-
-The slides of our work are available [here](https://github.com/dreasysnail/INSET/blob/master/inset.pdf).
 
 
 ## Citation
