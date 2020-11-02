@@ -25,10 +25,14 @@ Please decompress the downloaded file into `dataset` folder under the main direc
 ```bash
 tar -xzvf dataset.tar.gz
 ```
+
 After the decompression, you will see the following files:
+
 `tripadvisor_review_processed_uncut.json`: The main dataset file with minimum pre-processing. This file is a list of paragraphs, and each paragraph is a list of sentences.
-`sents_derep_bert_train_mask.json`, `sents_derep_bert_train.json`, `sents_derep_gpt_train.json`, `sents_derep_gpt_test.json`: These four files are derived from the main dataset file above. They are lists of sentences. They have already been tokenized by BERT and GPT tokenizers, converted in BERT and GPT token ids, and separated into train and test splits. Furthermore, in the first file masks have already been added so that our denoising sentence autoencoder can be directly trained with these four files. If you would like to see the texts (rather than token ids) of these sentences, you can use the GPT tokenizer
-`trip_cut_train_denoising.json`, `trip_derep_val.json`: 
+
+`sents_derep_bert_train_mask.json`, `sents_derep_bert_train.json`, `sents_derep_gpt_train.json`, `sents_derep_gpt_test.json`: These four files are derived from the main dataset file above. They are lists of sentences. They have already been tokenized by BERT and GPT tokenizers, converted in BERT and GPT token ids, and separated into train and test splits. Furthermore, in the first file masks have already been added so that our denoising sentence autoencoder can be directly trained with these four files. If you would like to see the texts (rather than token ids) of these sentences, you can use the GPT tokenizer to convert token ids back to natural sentences.
+
+`trip_cut_train_denoising.json`, `trip_derep_val.json`: These two files are the train and validation splits for training our sentence-level transformer. They are lists of pairs of indices, where (i, j) represents a 7-sentence subparagraph consisting of sentences j, j+1, ..., j+6 in the i'th paragraph of the main dataset file `tripadvisor_review_processed_uncut.json`.
 
 
 ## Our checkpoint models
