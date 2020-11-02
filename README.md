@@ -19,23 +19,32 @@ The live demo is available now! It can be found at [here](http://52.247.25.3:889
 
 ## Dataset
 
-We only provide our pre-processed TripAdvisor dataset for hotel reviews. The dataset files can be downloaded [here](https://yizzhang.blob.core.windows.net/transformer/yichen/test_github/INSET/dataset.tar.gz?sv=2019-10-10&st=2020-10-27T20%3A27%3A48Z&se=2029-10-28T20%3A27%3A00Z&sr=b&sp=r&sig=9vODA7K%2By%2B4Y%2BzJVuyuBMXz82AgwXvTb3WMn2dDmDHo%3D).
+We only provide our pre-processed TripAdvisor dataset of hotel reviews. The dataset file can be downloaded [here](https://yizzhang.blob.core.windows.net/transformer/yichen/test_github/INSET/dataset.tar.gz?sv=2019-10-10&st=2020-10-27T20%3A27%3A48Z&se=2029-10-28T20%3A27%3A00Z&sr=b&sp=r&sig=9vODA7K%2By%2B4Y%2BzJVuyuBMXz82AgwXvTb3WMn2dDmDHo%3D).
+
+Please decompress the downloaded file into `dataset` folder under the main directory of this repo:
+```bash
+tar -xzvf dataset.tar.gz
+```
+After the decompression, you will see the following files:
+`tripadvisor_review_processed_uncut.json`: The main dataset file with minimum pre-processing. This file is a list of paragraphs, and each paragraph is a list of sentences.
+`sents_derep_bert_train_mask.json`, `sents_derep_bert_train.json`, `sents_derep_gpt_train.json`, `sents_derep_gpt_test.json`: These four files are derived from the main dataset file above. They are lists of sentences. They have already been tokenized by BERT and GPT tokenizers, converted in BERT and GPT token ids, and separated into train and test splits. Furthermore, in the first file masks have already been added so that our denoising sentence autoencoder can be directly trained with these four files. If you would like to see the texts (rather than token ids) of these sentences, you can use the GPT tokenizer
+`trip_cut_train_denoising.json`, `trip_derep_val.json`: 
+
 
 ## Our checkpoint models
 
-Link to the model and config files can be downloaded [here](https://yizzhang.blob.core.windows.net/transformer/yichen/test_github/INSET/models.tar.gz?sv=2019-10-10&st=2020-10-27T20%3A25%3A40Z&se=2029-10-28T20%3A25%3A00Z&sr=b&sp=r&sig=SeYtZYcnCy9R5wnuM8rZxz63%2Fwq5fv5xVHxZLK0JCCI%3D).  
+Our checkpoint models and the config files can be downloaded [here](https://yizzhang.blob.core.windows.net/transformer/yichen/test_github/INSET/models.tar.gz?sv=2019-10-10&st=2020-10-27T20%3A25%3A40Z&se=2029-10-28T20%3A25%3A00Z&sr=b&sp=r&sig=SeYtZYcnCy9R5wnuM8rZxz63%2Fwq5fv5xVHxZLK0JCCI%3D).  
 
-To continue, please decompress the file and move the `models` folder into the main directory of this repo
+Please decompress the downloaded file into the `models` folder under the main directory of this repo:
 ```bash
 tar -xzvf models.tar.gz
 ```
 
 ## Instructions on using our code
 
-
 ### Setup Conda Environment
 
-Please use the below commandlines to clone, install the requirements and load the Conda environment (Note that Cuda 10 is required):
+Please use the commandlines below to clone, install the requirements and load the Conda environment (note that Cuda 10 is required):
 
 ```bash
 sudo apt-get install -y make wget gzip bzip2 xz-utils zstd
@@ -62,7 +71,7 @@ The generation will be at the same folder with a file name `output.txt`
 
 ## Training
 
-We have uploaded our training code. We will provide instructions for using them and dataset files in few days.
+We have uploaded our training code. We will provide instructions for using them in few days.
 
 
 ## Citation
