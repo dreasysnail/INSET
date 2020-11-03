@@ -46,6 +46,14 @@ Please decompress the downloaded file into the `models` folder under the main di
 tar -xzvf models.tar.gz
 ```
 
+After the decompression, you will see the following files/folder:
+
+`117M`: This folder contains the 117M pre-trained GPT checkpoint, its vocabulary and config files.
+
+`BERT-pretrain-1-step-5000.pkl`, `PRE-pretrain-1-step-5000.pkl`, `GPT-pretrain-1-step-5000.pkl`: Our checkpoint model for the denoising autoencoder. The first file is the BERT-like encoder. The second file is an intermediate component that enables feeding the sentence embedding into the GPT-like decoder (the third file).
+
+`BERTsent-8-step-1721.pkl`: Our checkpoint model for the sentence-level transformer.
+
 ## Instructions on using our code
 
 ### Setup Conda Environment
