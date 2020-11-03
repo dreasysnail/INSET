@@ -14,7 +14,7 @@ The slides of our work are available [here](https://github.com/dreasysnail/INSET
 
 ## Live demo
 
-The live demo is available now! It can be found [here](http://52.247.25.3:8899). Please expect delay and crash as it is running on a single GPU machine.
+The live demo is available now! It can be found [here](http://52.247.25.3:8899). Please expect delay or crash as it is running on a single GPU machine.
 
 
 ## Dataset
