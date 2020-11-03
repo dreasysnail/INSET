@@ -89,7 +89,7 @@ The scrpit `train_auto.py` trains the denoising autoencoder based on the dataset
 
 After training the denosing autoencoder, you might see the performance on sentence interpolation (cf. Table 1 in our paper) with the script `sent_inter.py`.
 
-Before training the sentence-level transformer, we pick up a checkpoint of the autoencoder and convert natural sentences in the corpus into sentence embeddings. This will significantly accelerate the training of the sentence-level transformer. To this end, please run `text_encode.py`.
+Before training the sentence-level transformer, please pick up a checkpoint of the autoencoder and convert natural sentences in the corpus into sentence embeddings. This will significantly accelerate the training of the sentence-level transformer. To this end, please run `text_encode.py`.
 
 ## Citation
 If you use this code in your research, you can cite our [paper](https://arxiv.org/abs/1911.03892):
