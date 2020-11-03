@@ -34,7 +34,7 @@ After the decompression, you will see the following files:
 
 `trip_cut_train_denoising.json`, `trip_derep_val.json`: These two files are the train and validation splits used for training our sentence-level transformer. They are lists of pairs of indices. Here, a pair of indices (i, j) represents a 7-sentence subparagraph consisting of sentences j, j+1, ..., j+6 in the i'th paragraph of the main dataset file `tripadvisor_review_processed_uncut.json`.
 
-Please refer to Subsection 4.1 of our paper for more details on the pre-processing our dataset.
+Please refer to Subsection 4.1 of our paper for more details on pre-processing our dataset.
 
 
 ## Our checkpoint models
