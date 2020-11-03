@@ -58,7 +58,7 @@ After the decompression, you will see the following files/folder:
 
 ### Setup Conda Environment
 
-Please use the commandlines below to clone, install the requirements and load the Conda environment (note that Cuda 10 is required):
+Please use the commands below to clone, install the requirements and load the Conda environment (note that Cuda 10 is required):
 
 ```bash
 sudo apt-get install -y make wget gzip bzip2 xz-utils zstd
@@ -69,24 +69,27 @@ conda env create -f LSP-linux.yml -n LSP
 conda activate LSP
 ```
 
-If you run this on an architecture other than Linux, please use `LSP-generic.yml` instead of `LSP-linux.yml` but please note that the generic one is not tested in all platform, so the stablity can not be gauranteed.
+If you run this on an architecture other than Linux, please use `LSP-generic.yml` instead of `LSP-linux.yml` but please note that the generic one is not tested in all platform, so the stablity can not be guaranteed.
 
 
-### Decoding with your own input file
+### Decoding with your own input file (generation with our checkpoint model)
 
-#### Generate from INSET model with your own input
-Please put an `input.txt` (see the `input.txt` in this repo for an example) into the main folder of this code, with `\t` seperating the first **THREE** and last **THREE** sentences. The generation can be done using following command:
+Please put an `input.txt` (see the `input.txt` file in this repo for an example) into the main directory, with `\t` seperating the first **THREE** and last **THREE** sentences. The generation can be done using following command:
   
 ```bash
 conda activate LSP
 python3 INSET_test.py
 ```
-The generation will be at the same folder with a file name `output.txt`
 
-## Training
+The script `INSET_test.py` automatically loads our checkpoint model, and the generation is in the main directory with the file name `output.txt`.
 
-We have uploaded our training code. We will provide instructions for using them in few days.
+### Training
 
+The scrpit `train_auto.py` trains the denoising autoencoder based on the dataset files `sents_derep_bert_train_mask.json`, `sents_derep_bert_train.json`, `sents_derep_gpt_train.json`, `sents_derep_gpt_test.json`. It creates a subfolder `auto_log` and saves checkpoint models in this subfolder.
+
+After training the denosing autoencoder, you might see the performance on sentence interpolation (cf. Table 1 in our paper) with the script `sent_inter.py`.
+
+Before training the sentence-level transformer, we pick up a checkpoint of the autoencoder and convert natural sentences in the corpus into sentence embeddings. This will significantly accelerate the training of the sentence-level transformer. To this end, please run `text_encode.py`.
 
 ## Citation
 If you use this code in your research, you can cite our [paper](https://arxiv.org/abs/1911.03892):
