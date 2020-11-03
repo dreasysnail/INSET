@@ -89,7 +89,9 @@ The scrpit `train_auto.py` trains the denoising autoencoder based on the dataset
 
 After training the denosing autoencoder, you might see the performance on sentence interpolation (cf. Table 1 in our paper) with the script `sent_inter.py`.
 
-Before training the sentence-level transformer, please pick up a checkpoint of the autoencoder and convert natural sentences in the corpus into sentence embeddings. This will significantly accelerate the training of the sentence-level transformer. To this end, please run `text_encode.py`.
+Before training the sentence-level transformer, please pick up a checkpoint of the autoencoder and convert natural sentences in the corpus into sentence embeddings. This will significantly accelerate the training of the sentence-level transformer. To this end, please run `text_encode.py`. This script takes the main dataset file `tripadvisor_review_processed_uncut.json` as input, does some filtering and pre-processing as specified in Subsection 4.1 of our paper, and encodes sentences into embeddings. The output file is `trip_cut_half.pt` under the `dataset` folder.
+
+Finally, the script `train_fillgap.py` trains the sentence-level transformer based on the dataset files `trip_cut_train_denoising.json`, `trip_derep_val.json`, and `trip_cut_half.pt`. It creates a subfolder `fillgap_log` and saves checkpoint models in this subfolder. 
 
 ## Citation
 If you use this code in your research, you can cite our [paper](https://arxiv.org/abs/1911.03892):
