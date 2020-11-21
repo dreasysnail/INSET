@@ -19,7 +19,7 @@ The live demo is available now! It can be found [here](http://52.247.25.3:8899).
 
 ## Dataset
 
-We only provide our pre-processed TripAdvisor dataset of hotel reviews. The dataset file can be downloaded [here](https://yizzhang.blob.core.windows.net/transformer/yichen/test_github/INSET/dataset.tar.gz?sv=2019-10-10&st=2020-10-27T20%3A27%3A48Z&se=2029-10-28T20%3A27%3A00Z&sr=b&sp=r&sig=9vODA7K%2By%2B4Y%2BzJVuyuBMXz82AgwXvTb3WMn2dDmDHo%3D).
+We only provide our pre-processed TripAdvisor dataset of hotel reviews. The dataset file can be downloaded [here](https://yizzhang.blob.core.windows.net/transformer/yichen/test_github/INSET/dataset.tar.gz?sv=2019-10-10&st=2020-11-21T07%3A51%3A00Z&se=2029-11-22T07%3A51%3A00Z&sr=b&sp=r&sig=F9hnllgmKlpx%2BSFklwtfdA%2FrpuIDtYclTD%2F%2Bn46nY6Y%3D).
 
 Please decompress the downloaded file into the `dataset` folder under the main directory of this repo:
 ```bash
@@ -39,7 +39,7 @@ Please refer to Subsection 4.1 of our paper for more details on pre-processing t
 
 ## Our checkpoint models
 
-Our checkpoint models and the config files can be downloaded [here](https://yizzhang.blob.core.windows.net/transformer/yichen/test_github/INSET/models.tar.gz?sv=2019-10-10&st=2020-10-27T20%3A25%3A40Z&se=2029-10-28T20%3A25%3A00Z&sr=b&sp=r&sig=SeYtZYcnCy9R5wnuM8rZxz63%2Fwq5fv5xVHxZLK0JCCI%3D).  
+Our checkpoint models and the config files can be downloaded [here](https://yizzhang.blob.core.windows.net/transformer/yichen/test_github/INSET/models.tar.gz?sv=2019-10-10&st=2020-11-21T07%3A52%3A52Z&se=2029-11-22T07%3A52%3A00Z&sr=b&sp=r&sig=KpmFZf7klp7kg4ilEyCNrFmBtmflCu99mib7o4INEcg%3D).  
 
 Please decompress the downloaded file into the `models` folder under the main directory of this repo:
 ```bash
